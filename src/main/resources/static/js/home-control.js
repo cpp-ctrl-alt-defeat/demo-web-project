@@ -30,6 +30,21 @@ function heAwaits() {
 				$('#msg').text("Failed to fulfill the request");
 			}
 		});
+		
+function pedrosFirstHttpApi() {
+	$.ajax(
+		{
+			type : "GET",
+			url  : "cs480/pedro",
+			data : {
+			},
+			success : function(result) {
+				$('#msg').text(result);
+			},
+			error: function (jqXHR, exception) {
+				$('#msg').text("Failed to fulfill the request");
+			}
+		});
 
 function deleteUser(userId) {
 	$.ajax(

@@ -52,7 +52,7 @@ public class WebController {
 		return "OK";
 	}
 	
-	@RequestMapping(value = "/cs480/ping/pedro", method = RequestMethod.GET)
+	@RequestMapping(value = "/cs480/pedro", method = RequestMethod.GET)
 	String pedrosFirstHttpApi() {
 		return "Pedro's First HTTP API :)";
 	}
