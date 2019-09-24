@@ -70,7 +70,7 @@ public class WebController {
 	
 	@RequestMapping(value = "/cs480/sonia", method = RequestMethod.GET)
 	String testing123() {
-		return "Testing, 123.";
+		return "Hi! can I have a job now?";
 	}
 	
 	@RequestMapping(value = "/cs480/carmelo", method = RequestMethod.GET)
