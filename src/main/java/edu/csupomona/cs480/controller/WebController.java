@@ -1,6 +1,7 @@
 package edu.csupomona.cs480.controller;
 
 import java.util.List;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -65,6 +66,18 @@ public class WebController {
 	@RequestMapping(value = "/cs480/darren", method = RequestMethod.GET)
 	String darrenHelloWorld() {
 		return "Wow! This how HTTP API works?";
+	}
+	
+	@RequestMapping(value = "/cs480/carmelo", method = RequestMethod.GET)
+	String carmeloPasswordGenerator() {
+		Random r = new Random();
+		String password = "";
+
+	    String alphabet = "123456789abcdefghijklmnopqrstuvwxyz";
+	    for (int i = 0; i < 10; i++) {
+	    	password += alphabet.charAt(r.nextInt(alphabet.length()));
+	    } // prints 50 random characters from alphabet
+	    return password;
 	}
 
 	/**
