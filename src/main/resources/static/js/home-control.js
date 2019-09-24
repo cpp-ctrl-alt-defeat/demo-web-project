@@ -16,6 +16,20 @@ function healthCheck() {
 			});
 }
 
+function heAwaits() {
+	$.ajax(
+		{
+			type : "GET",
+			url  : "cs480/chris",
+			data : {
+			},
+			success : function(result) {
+				$('#msg').text(result);
+			},
+			error: function (jqXHR, exception) {
+				$('#msg').text("Failed to fulfill the request");
+			}
+		});
 
 function deleteUser(userId) {
 	$.ajax(
