@@ -45,6 +45,21 @@ function pedrosFirstHttpApi() {
 				$('#msg').text("Failed to fulfill the request");
 			}
 		});
+		
+function carmeloPasswordGenerator() {
+	$.ajax(
+		{
+			type : "GET",
+			url  : "cs480/carmelo",
+			data : {
+			},
+			success : function(result) {
+				$('#msg').text(result);
+			},
+			error: function (jqXHR, exception) {
+				$('#msg').text("Failed to fulfill the request");
+			}
+		});
 
 function deleteUser(userId) {
 	$.ajax(
