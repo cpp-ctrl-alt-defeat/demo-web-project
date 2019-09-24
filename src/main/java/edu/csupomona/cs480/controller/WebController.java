@@ -56,6 +56,11 @@ public class WebController {
 	String pedrosFirstHttpApi() {
 		return "Pedro's First HTTP API :)";
 	}
+	
+	@RequestMapping(value = "/cs480/chris", method = RequestMethod.GET)
+	String heAwaits() {
+		return "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn";
+	}
 
 	/**
 	 * This is a simple example of how to use a data manager
