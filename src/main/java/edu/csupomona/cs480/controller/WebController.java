@@ -68,6 +68,11 @@ public class WebController {
 		return "Wow! This how HTTP API works?";
 	}
 	
+	@RequestMapping(value = "/cs480/sonia", method = RequestMethod.GET)
+	String testing123() {
+		return "Testing, 123.";
+	}
+	
 	@RequestMapping(value = "/cs480/carmelo", method = RequestMethod.GET)
 	String carmeloPasswordGenerator() {
 		Random r = new Random();
