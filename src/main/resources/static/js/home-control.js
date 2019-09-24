@@ -20,7 +20,7 @@ function heAwaits() {
 	$.ajax(
 		{
 			type : "GET",
-			url  : "cs480/chris",
+			url  : "/cs480/chris",
 			data : {
 			},
 			success : function(result) {
@@ -30,36 +30,70 @@ function heAwaits() {
 				$('#msg').text("Failed to fulfill the request");
 			}
 		});
+}
 		
 function pedrosFirstHttpApi() {
 	$.ajax(
 		{
 			type : "GET",
-			url  : "cs480/pedro",
+			url  : "/cs480/pedro",
 			data : {
 			},
 			success : function(result) {
-				$('#msg').text(result);
+				$('#msg1').text(result);
 			},
 			error: function (jqXHR, exception) {
-				$('#msg').text("Failed to fulfill the request");
+				$('#msg1').text("Failed to fulfill the request");
 			}
 		});
-		
+}
 function carmeloPasswordGenerator() {
 	$.ajax(
 		{
 			type : "GET",
-			url  : "cs480/carmelo",
+			url  : "/cs480/carmelo",
 			data : {
 			},
 			success : function(result) {
-				$('#msg').text(result);
+				$('#carmelo').text(result);
 			},
 			error: function (jqXHR, exception) {
-				$('#msg').text("Failed to fulfill the request");
+				$('#carmelo').text("Failed to fulfill the request");
 			}
 		});
+}
+
+function testing123() {
+	$.ajax(
+		{
+			type : "GET",
+			url  : "/cs480/sonia",
+			data : {
+			},
+			success : function(result) {
+				$('#sonia').text(result);
+			},
+			error: function (jqXHR, exception) {
+				$('#sonia').text("Failed to fulfill the request");
+			}
+		});
+}
+
+function darrenHelloWorld() {
+	$.ajax(
+		{
+			type : "GET",
+			url  : "/cs480/darren",
+			data : {
+			},
+			success : function(result) {
+				$('#darren').text(result);
+			},
+			error: function (jqXHR, exception) {
+				$('#darren').text("Failed to fulfill the request");
+			}
+		});
+}
 
 function deleteUser(userId) {
 	$.ajax(
