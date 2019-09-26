@@ -47,6 +47,23 @@ function pedrosFirstHttpApi() {
 			}
 		});
 }
+
+function pedrosUserInfo() {
+	$.ajax(
+		{
+			type : "GET",
+			url  : "/cs480/pedro2",
+			data : {
+			},
+			success : function(result) {
+				$('#pedrosUserInfo').text(result);
+			},
+			error: function (jqXHR, exception) {
+				$('#pedrosUserInfo').text("Failed to fulfill the request");
+			}
+		});
+}
+
 function carmeloPasswordGenerator() {
 	$.ajax(
 		{

@@ -1,7 +1,7 @@
 package edu.csupomona.cs480.data;
 
 import java.util.Date;
-
+import com.google.common.base.MoreObjects;
 
 /**
  * The basic user object.
@@ -48,4 +48,15 @@ public class User {
 	public void setCreationTime(String creationTime) {
 		this.creationTime = creationTime;
 	}
+	
+	//Pedro's Guava method
+	@Override
+    public String toString() {
+        return MoreObjects.toStringHelper(User.class)
+            .add("id", this.id)
+            .add("name", this.name)
+            .add("major", this.major)
+            .add("creation time", this.creationTime)
+            .toString();
+    }
 }

@@ -53,9 +53,20 @@ public class WebController {
 		return "OK";
 	}
 	
+	//Pedro's 1st method (A3)
 	@RequestMapping(value = "/cs480/pedro", method = RequestMethod.GET)
 	String pedrosFirstHttpApi() {
-		return "Pedro's First HTTP API :)";
+		return "My First HTTP API :)";
+	}
+	
+	//Pedro's 2nd method (A4)
+	@RequestMapping(value = "/cs480/pedro2", method = RequestMethod.GET)
+	String pedrosUserInfo() {
+		User u = new User();
+		u.setId("123");
+		u.setName("Pedro");
+		u.setMajor("CS");
+		return u.toString();
 	}
 	
 	@RequestMapping(value = "/cs480/chris", method = RequestMethod.GET)
