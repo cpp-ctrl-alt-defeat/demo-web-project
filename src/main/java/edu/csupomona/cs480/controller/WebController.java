@@ -15,6 +15,9 @@ import edu.csupomona.cs480.App;
 import edu.csupomona.cs480.data.User;
 import edu.csupomona.cs480.data.provider.UserManager;
 
+import org.h2.Driver;
+import java.sql.*;
+
 
 /**
  * This is the controller used by Spring framework.
@@ -94,6 +97,22 @@ public class WebController {
 	    	password += alphabet.charAt(r.nextInt(alphabet.length()));
 	    } // prints 50 random characters from alphabet
 	    return password;
+	}
+	
+	@RequestMapping(value = "/cs480/carmelo2", method = RequestMethod.GET)
+	String carmeloDatabase() throws Exception {
+		int countNum = 0;
+		 Connection conn = DriverManager.getConnection("jdbc:h2:./src/main/java/edu/csupomona/cs480/controller/test", "sa", "");
+		        // add application code here
+		 Statement Stmt = conn.createStatement(); 
+		 Stmt.executeUpdate("insert into test (name) values('visitor')");
+		 ResultSet rs = Stmt.executeQuery("Select count(*) as countNum from test");
+		 while(rs.next()) { 
+	            // Retrieve by column name 
+	            countNum  = rs.getInt("countNum"); 
+		 }
+		        conn.close();
+		        return "Connected - " + countNum + " page views";
 	}
 
 	/**

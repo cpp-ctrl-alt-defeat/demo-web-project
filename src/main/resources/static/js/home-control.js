@@ -82,6 +82,22 @@ function carmeloPasswordGenerator() {
 		});
 }
 
+function carmeloDatabase() {
+	$.ajax(
+		{
+			type : "GET",
+			url  : "/cs480/carmelo2",
+			data : {
+			},
+			success : function(result) {
+				$('#carmelo2').text(result);
+			},
+			error: function (jqXHR, exception) {
+				$('#carmelo2').text("Failed to fulfill the request");
+			}
+		});
+}
+
 function testing123() {
 	$.ajax(
 		{
