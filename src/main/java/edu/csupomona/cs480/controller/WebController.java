@@ -77,7 +77,7 @@ public class WebController {
 		return "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn";
 	}
 	
-	<!-- Will add data passing to Chart JavaScript -->
+	<!-- Will add data passing to Chart JavaScript -Chris -->
 	
 	@RequestMapping(value = "/cs480/darren", method = RequestMethod.GET)
 	String darrenHelloWorld() {
