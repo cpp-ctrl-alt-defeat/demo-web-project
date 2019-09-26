@@ -31,7 +31,8 @@ function heAwaits() {
 			}
 		});
 }
-		
+
+//Pedro's function (A3)
 function pedrosFirstHttpApi() {
 	$.ajax(
 		{
@@ -48,6 +49,7 @@ function pedrosFirstHttpApi() {
 		});
 }
 
+//Pedro's function (A4)
 function pedrosUserInfo() {
 	$.ajax(
 		{
