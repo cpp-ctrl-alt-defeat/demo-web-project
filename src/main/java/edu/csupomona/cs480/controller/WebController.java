@@ -77,6 +77,8 @@ public class WebController {
 		return "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn";
 	}
 	
+	<!-- Will add data passing to Chart JavaScript -->
+	
 	@RequestMapping(value = "/cs480/darren", method = RequestMethod.GET)
 	String darrenHelloWorld() {
 		return "Wow! This how HTTP API works?";
